@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+<h1>FORMPAGE</h1>
+
+<form action="/form/" method="post" style="margin-left: 20px;
+    margin-right: 20px;">{% csrf_token %}
+  <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="first">FIRST</label>
+        <input type="text" class="form-control" id="first" name="first">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="last">LAST</label>
+        <input type="text" class="form-control" id="last" name="last">
+      </div>
+    </div>
+  <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="semester">SEMESTER</label>
+        <input type="text" class="form-control" id="semester" name="semester">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" class="form-control" id="address"  name="address">
+    </div>
+
+
+
+      <div class="form-group col-md-2">
+        <label for="zipcode">Zip</label>
+        <input type="text" class="form-control" id="zipcode" name="zipcode">
+      </div>
+    </div>
+
+
+<input type="hidden" class="form-control" id="amount" name="amount" value=500>
+
+<button type="submit" class="btn btn-dark">SUBMIT</button>  
+</form>
+{% endblock content %}
